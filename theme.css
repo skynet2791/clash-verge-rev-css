@@ -1,0 +1,527 @@
+/* ==========================================================================
+   Clash Verge Premium Light CSS Theme (Shadcn-Light Inspired)
+   ========================================================================== */
+
+/* 1. Override Inline CSS Variables on <html> for Light Mode */
+:scope {
+  --background-color: #f8fafc !important; /* Light Slate 50 background */
+  --divider-color: rgba(0, 0, 0, 0.06) !important; /* Subtle borders */
+  --selection-color: rgba(0, 0, 0, 0.04) !important;
+  --scroller-color: rgba(0, 0, 0, 0.1) !important;
+  --primary-main: #3b82f6 !important; /* Premium blue accent */
+  --background-color-alpha: rgba(59, 130, 246, 0.08) !important;
+  --window-border-color: rgba(0, 0, 0, 0.06) !important;
+  --scrollbar-bg: #f8fafc !important;
+  --scrollbar-thumb: rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 2. Global Resets and Page Base */
+body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important; /* Slate 900 dark text */
+}
+
+/* Global Font Face */
+* {
+  font-family: 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* 3. Main Layout Structure */
+.windows.layout {
+  background-color: #f8fafc !important;
+}
+
+.layout-content__left {
+  background-color: #ffffff !important; /* Clean solid white sidebar */
+  border-right: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.layout-content__right {
+  background-color: #f8fafc !important;
+}
+
+.the-bar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.the-content {
+  background-color: #f8fafc !important;
+}
+
+.base-page {
+  background-color: #f8fafc !important;
+}
+
+/* Header bar title (e.g. "首页") */
+.base-page header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.base-page header p,
+.base-page header [class*="MuiTypography-root"] {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  font-size: 1.15rem !important;
+}
+
+.base-container {
+  background-color: #f8fafc !important;
+}
+
+/* 4. Logo Styling */
+.the-logo svg path {
+  fill: #0f172a !important;
+}
+
+.the-logo svg#layout1 {
+  fill: #0f172a !important;
+}
+
+/* 5. Left Menu Navigation (Light Mode) */
+.the-menu .MuiListItemButton-root {
+  border-radius: 8px !important;
+  margin: 4px 12px !important;
+  padding: 8px 16px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Unselected items text and icon color */
+.the-menu .MuiListItemButton-root .MuiListItemText-primary,
+.the-menu .MuiListItemButton-root .MuiTypography-root {
+  color: #64748b !important; /* Slate 500 */
+}
+
+.the-menu .MuiListItemButton-root .MuiListItemIcon-root svg {
+  color: #64748b !important;
+}
+
+/* Hover items text and icon color */
+.the-menu .MuiListItemButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.the-menu .MuiListItemButton-root:hover .MuiListItemText-primary,
+.the-menu .MuiListItemButton-root:hover .MuiTypography-root {
+  color: #0f172a !important;
+}
+
+.the-menu .MuiListItemButton-root:hover .MuiListItemIcon-root svg {
+  color: #0f172a !important;
+}
+
+/* Selected item text and icon color */
+.the-menu .MuiListItemButton-root.Mui-selected {
+  background-color: rgba(59, 130, 246, 0.08) !important; /* Soft blue highlight */
+}
+
+.the-menu .MuiListItemButton-root.Mui-selected .MuiListItemText-primary,
+.the-menu .MuiListItemButton-root.Mui-selected .MuiTypography-root {
+  color: #3b82f6 !important; /* Selected bright blue */
+  font-weight: 600 !important;
+}
+
+.the-menu .MuiListItemButton-root.Mui-selected .MuiListItemIcon-root svg {
+  color: #3b82f6 !important;
+}
+
+.the-menu .MuiListItemIcon-root {
+  min-width: 36px !important;
+}
+
+/* 6. Sidebar Traffic Section */
+.the-traffic {
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  padding-top: 16px !important;
+}
+
+/* Upload telemetry colors */
+[title="上传速度"] span {
+  color: #ef4444 !important; /* Red 500 upload text */
+  font-weight: 600 !important;
+}
+[title="上传速度"] svg {
+  color: #ef4444 !important;
+}
+
+/* Download telemetry colors */
+[title="下载速度"] span {
+  color: #10b981 !important; /* Emerald green download text */
+  font-weight: 600 !important;
+}
+[title="下载速度"] svg {
+  color: #10b981 !important;
+}
+
+/* Memory usage */
+[title*="内核占用"] span {
+  color: #64748b !important;
+}
+[title*="内核占用"] svg {
+  color: #64748b !important;
+}
+
+/* 7. Grid Cards (Subscription, Profile, Mode Cards - TOP LEVEL ONLY) */
+/* We keep default paddings, heights, shadows, and radii intact to preserve layout sizes */
+.base-content > .MuiGrid-container > [class*="MuiGrid-grid-"] > .MuiBox-root {
+  background-color: #ffffff !important; /* Clean solid white card */
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Global text inside base-content */
+.base-content .MuiTypography-root,
+.base-content p,
+.base-content span,
+.base-content li {
+  color: #475569 !important; /* Slate 600 for body text */
+}
+
+/* Card Header Titles */
+.base-content h6, 
+.base-content [class*="MuiTypography-h6"] {
+  color: #0f172a !important; /* Slate 900 for headings */
+  font-weight: 600 !important;
+}
+
+/* Bright highlights / data labels */
+.base-content strong,
+.base-content b,
+.base-content [class*="css-10rvbm3"] {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+}
+
+/* 8. Forms & Selector Inputs (Select Boxes / Dropdowns) */
+.base-content .MuiSelect-select,
+.base-content .MuiOutlinedInput-root,
+.base-content .MuiInputBase-input {
+  color: #0f172a !important; /* Slate 900 text for inputs */
+}
+
+.base-content .MuiInputLabel-root {
+  color: #64748b !important; /* Input box labels */
+}
+
+.base-content .MuiInputLabel-root.Mui-focused {
+  color: #3b82f6 !important; /* Selected field label highlight */
+}
+
+.base-content .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.base-content .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 9. Description Alert Boxes (e.g. TUN mode alert) */
+.base-content [class*="css-f9z05k"] {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-top: 8px !important;
+}
+
+/* Apply background and border only to the inner text element */
+.base-content [class*="css-f9z05k"] > .MuiTypography-root,
+.base-content [class*="css-f9z05k"] > .MuiTypography-caption,
+.base-content [class*="css-f9z05k"] > div,
+.base-content [class*="css-f9z05k"] > span {
+  background-color: rgba(59, 130, 246, 0.05) !important; /* Soft transparent blue */
+  border: 1px solid rgba(59, 130, 246, 0.22) !important; /* Clean blue border */
+  border-radius: 6px !important;
+  color: #1d4ed8 !important; /* Dark blue text */
+}
+
+/* 10. Buttons & Actions */
+/* Standalone outline buttons (excludes button groups to preserve border-collapse) */
+.MuiButton-outlined:not(.MuiButtonGroup-grouped) {
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+  text-transform: none !important;
+}
+
+/* Button Group Styling (e.g., Theme Toggle or Proxy Mode selection in tabs) */
+.MuiButtonGroup-root {
+  box-shadow: none !important;
+}
+
+.MuiButtonGroup-grouped.MuiButton-outlined {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #64748b !important;
+  background-color: #ffffff !important;
+  text-transform: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.MuiButtonGroup-grouped.MuiButton-outlined:hover {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Active primary contained button in group */
+.MuiButtonGroup-grouped.MuiButton-containedPrimary {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.MuiButton-outlined:hover {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.MuiIconButton-root {
+  color: #64748b !important;
+  transition: all 0.2s ease !important;
+}
+
+.MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  color: #0f172a !important;
+}
+
+/* 11. Chips */
+/* Default/Uncolored Chips (e.g. background grey tags) */
+.base-content .MuiChip-root:not(.MuiChip-colorSuccess):not(.MuiChip-colorError):not(.MuiChip-colorWarning) {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.base-content .MuiChip-root:not(.MuiChip-colorSuccess):not(.MuiChip-colorError):not(.MuiChip-colorWarning) .MuiChip-label {
+  color: #64748b !important;
+}
+
+/* Outlined Chips (e.g. Node selection tags like "JP") */
+.base-content .MuiChip-outlined {
+  background-color: transparent !important;
+  border-color: rgba(59, 130, 246, 0.22) !important;
+}
+
+.base-content .MuiChip-outlined .MuiChip-label {
+  color: #2563eb !important;
+}
+
+/* Success Chip (e.g. "支持" / "Success") */
+.base-content .MuiChip-colorSuccess {
+  background-color: #f0fdf4 !important; /* Soft light green */
+  border: 1px solid rgba(22, 163, 74, 0.25) !important;
+}
+
+.base-content .MuiChip-colorSuccess .MuiChip-label {
+  color: #16a34a !important; /* Emerald green text */
+  font-weight: 600 !important;
+}
+
+.base-content .MuiChip-colorSuccess svg,
+.base-content .MuiChip-colorSuccess .MuiChip-icon {
+  color: #16a34a !important; /* Green icon */
+  fill: #16a34a !important;
+}
+
+/* Error Chip (e.g. "Failed") */
+.base-content .MuiChip-colorError {
+  background-color: #fef2f2 !important; /* Soft light red */
+  border: 1px solid rgba(220, 38, 38, 0.25) !important;
+}
+
+.base-content .MuiChip-colorError .MuiChip-label {
+  color: #dc2626 !important; /* Deep red text */
+  font-weight: 600 !important;
+}
+
+.base-content .MuiChip-colorError svg,
+.base-content .MuiChip-colorError .MuiChip-icon {
+  color: #dc2626 !important; /* Red icon */
+  fill: #dc2626 !important;
+}
+
+/* Warning Chip (e.g. "Timeout") */
+.base-content .MuiChip-colorWarning {
+  background-color: #fffbeb !important; /* Soft light yellow */
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+}
+
+.base-content .MuiChip-colorWarning .MuiChip-label {
+  color: #d97706 !important; /* Deep orange text */
+  font-weight: 600 !important;
+}
+
+.base-content .MuiChip-colorWarning svg,
+.base-content .MuiChip-colorWarning .MuiChip-icon {
+  color: #d97706 !important;
+  fill: #d97706 !important;
+}
+
+/* 12. Active Mode Card Options (Rule, Global, Direct inside stack) */
+/* We remove padding and radius overrides to preserve default sizes and margins */
+/* Selected option buttons (MuiPaper elevation 2 inside Stack) */
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation2 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation2 .MuiTypography-root,
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation2 p,
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation2 span {
+  color: #2563eb !important; /* Selected text blue highlight */
+  font-weight: 600 !important;
+}
+
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation2 svg {
+  color: #2563eb !important;
+}
+
+/* Selected option dot color (change from white to the button text's blue) */
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation2 > [class*="css-13v6c89"],
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation2 > div:last-child {
+  background-color: #2563eb !important;
+}
+
+/* Unselected option buttons (MuiPaper elevation 0 inside Stack) */
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0 {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.2s ease !important;
+}
+
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0 .MuiTypography-root,
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0 p,
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0 span {
+  color: #64748b !important;
+}
+
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0 svg {
+  color: #64748b !important;
+}
+
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0:hover {
+  background-color: #f8fafc !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0:hover .MuiTypography-root,
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0:hover p,
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0:hover span {
+  color: #0f172a !important;
+}
+
+.base-content [class*="MuiStack-root"] > .MuiPaper-elevation0:hover svg {
+  color: #0f172a !important;
+}
+
+/* 13. Sub-cards inside Grid (specifically the 6 metrics in Traffic Statistics) */
+/* We keep default paddings, heights, and shadows */
+.base-content [class*="MuiGrid-grid-"] > .MuiPaper-elevation0 {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.base-content [class*="MuiGrid-grid-"] > .MuiPaper-elevation0 .MuiTypography-root,
+.base-content [class*="MuiGrid-grid-"] > .MuiPaper-elevation0 p,
+.base-content [class*="MuiGrid-grid-"] > .MuiPaper-elevation0 span {
+  color: #64748b !important; /* Secondary labels text */
+}
+
+/* The actual big numbers (like upload speed / download speed numbers) */
+.base-content [class*="MuiGrid-grid-"] > .MuiPaper-elevation0 p[class*="MuiTypography-body1"] {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+/* 14. Switch Styles */
+.MuiSwitch-track {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  opacity: 1 !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: #3b82f6 !important;
+  opacity: 1 !important;
+}
+
+.MuiSwitch-thumb {
+  background-color: #ffffff !important;
+}
+
+/* 15. Progress Bars */
+.MuiLinearProgress-root {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  height: 6px !important;
+  border-radius: 3px !important;
+}
+
+.MuiLinearProgress-bar {
+  background-color: #3b82f6 !important;
+  border-radius: 3px !important;
+}
+
+/* 16. Sleek Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ==========================================================================
+   17. Proxy Nodes & Subscription Profiles Selected States
+   ========================================================================== */
+
+/* Target selected list items and cards inside the right content layout (Proxy and Subscription pages) */
+.layout-content__right [class*="Mui-selected"],
+.layout-content__right .Mui-selected,
+.layout-content__right [class*="selected"],
+.layout-content__right .selected,
+.layout-content__right .active,
+.layout-content__right [class*="active"],
+.layout-content__right [class*="card"].active,
+.layout-content__right [class*="card"].selected,
+.layout-content__right [class*="card"].Mui-selected,
+.layout-content__right [class*="item"].active,
+.layout-content__right [class*="item"].selected,
+.layout-content__right [class*="item"].Mui-selected,
+.layout-content__right [class*="profile"].active,
+.layout-content__right [class*="profile"].selected,
+.layout-content__right [aria-selected="true"] {
+  border: 1px solid rgba(59, 130, 246, 0.35) !important; /* Uniform thin border on all 4 sides */
+  border-left: 1px solid rgba(59, 130, 246, 0.35) !important; /* Explicitly force thin left border to overwrite default 4px line */
+  background-color: rgba(59, 130, 246, 0.14) !important; /* Clean light blue background highlight */
+}
+
+/* Hide any left vertical line implemented via pseudo-elements (before/after) */
+.layout-content__right [class*="Mui-selected"]::before,
+.layout-content__right .Mui-selected::before,
+.layout-content__right [class*="selected"]::before,
+.layout-content__right .selected::before,
+.layout-content__right .active::before,
+.layout-content__right [class*="active"]::before,
+.layout-content__right [class*="profile"]::before,
+.layout-content__right [aria-selected="true"]::before,
+.layout-content__right [class*="Mui-selected"]::after,
+.layout-content__right .Mui-selected::after,
+.layout-content__right [class*="selected"]::after,
+.layout-content__right .selected::after,
+.layout-content__right .active::after,
+.layout-content__right [class*="active"]::after,
+.layout-content__right [class*="profile"]::after,
+.layout-content__right [aria-selected="true"]::after {
+  display: none !important;
+  content: none !important;
+}
