@@ -22,9 +22,14 @@ body {
 }
 
 /* Global Font Face */
-* {
-  font-family: 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
-  -webkit-font-smoothing: antialiased !important;
+body {
+  font-family: 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Apply safely to common text elements without overriding icon fonts */
+div, span, p, a, button, input, select, textarea, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
 }
 
 /* 3. Main Layout Structure */
@@ -546,12 +551,8 @@ body {
    ========================================================================== */
 
 /* Target selected list items and cards inside the right content layout (Proxy and Subscription pages) */
-.layout-content__right [class*="Mui-selected"],
-.layout-content__right .Mui-selected,
-.layout-content__right [class*="selected"],
-.layout-content__right .selected,
-.layout-content__right .active,
-.layout-content__right [class*="active"],
+.layout-content__right .MuiListItemButton-root.Mui-selected,
+.layout-content__right .MuiListItem-root.Mui-selected,
 .layout-content__right [class*="card"].active,
 .layout-content__right [class*="card"].selected,
 .layout-content__right [class*="card"].Mui-selected,
@@ -566,22 +567,20 @@ body {
   background-color: rgba(59, 130, 246, 0.14) !important; /* Clean light blue background highlight */
 }
 
-/* Hide any left vertical line implemented via pseudo-elements (before/after) */
-.layout-content__right [class*="Mui-selected"]::before,
-.layout-content__right .Mui-selected::before,
-.layout-content__right [class*="selected"]::before,
-.layout-content__right .selected::before,
-.layout-content__right .active::before,
-.layout-content__right [class*="active"]::before,
-.layout-content__right [class*="profile"]::before,
+/* Hide any left vertical line implemented via pseudo-elements on list items, card wrappers, and profiles */
+.layout-content__right .MuiListItemButton-root.Mui-selected::before,
+.layout-content__right .MuiListItemButton-root.Mui-selected::after,
+.layout-content__right .MuiListItem-root.Mui-selected::before,
+.layout-content__right .MuiListItem-root.Mui-selected::after,
+.layout-content__right [class*="profile"].active::before,
+.layout-content__right [class*="profile"].active::after,
+.layout-content__right [class*="profile"].selected::before,
+.layout-content__right [class*="profile"].selected::after,
+.layout-content__right [class*="card"].active::before,
+.layout-content__right [class*="card"].active::after,
+.layout-content__right [class*="card"].selected::before,
+.layout-content__right [class*="card"].selected::after,
 .layout-content__right [aria-selected="true"]::before,
-.layout-content__right [class*="Mui-selected"]::after,
-.layout-content__right .Mui-selected::after,
-.layout-content__right [class*="selected"]::after,
-.layout-content__right .selected::after,
-.layout-content__right .active::after,
-.layout-content__right [class*="active"]::after,
-.layout-content__right [class*="profile"]::after,
 .layout-content__right [aria-selected="true"]::after {
   display: none !important;
   content: none !important;
@@ -614,7 +613,8 @@ img[class*="icon"],
 img[class*="logo"],
 .proxy-group-icon,
 .group-icon,
-.node-icon {
+.node-icon,
+.layout-content__right img {
   width: 18px !important;
   height: 18px !important;
   min-width: 18px !important;
