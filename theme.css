@@ -23,7 +23,7 @@ body {
 
 /* Global Font Face */
 * {
-  font-family: 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
@@ -603,4 +603,35 @@ textarea::selection,
 .MuiInputBase-input::selection {
   background-color: #3b82f6 !important;
   color: #ffffff !important;
+}
+
+/* ==========================================================================
+   19. Proxy Group & Node Icons (Emojis / Images)
+   ========================================================================== */
+
+/* Target custom proxy group/node icons (img tags) to match premium style */
+img[class*="icon"],
+img[class*="logo"],
+.proxy-group-icon,
+.group-icon,
+.node-icon {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  border-radius: 4px !important; /* Premium rounded corner matching buttons */
+  object-fit: contain !important;
+  vertical-align: middle !important;
+  margin-right: 8px !important;
+}
+
+/* Target emoji icons (text emojis or custom emoji wrapper span) */
+.emoji,
+span[class*="emoji"] {
+  font-size: 1.15rem !important; /* Adjust size to harmonize with label text */
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  margin-right: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
 }
