@@ -525,3 +525,21 @@ body {
   display: none !important;
   content: none !important;
 }
+
+/* ==========================================================================
+   18. Custom Text Selection Highlights
+   ========================================================================== */
+
+/* Use solid vibrant blue background with white text to guarantee high contrast and readability */
+::selection {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+input::selection,
+textarea::selection,
+[contenteditable="true"]::selection,
+.MuiInputBase-input::selection {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
