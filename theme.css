@@ -608,30 +608,37 @@ textarea::selection,
    19. Proxy Group & Node Icons (Emojis / Images)
    ========================================================================== */
 
-/* Target custom proxy group/node icons (img tags) to match premium style */
-img[class*="icon"],
-img[class*="logo"],
-.proxy-group-icon,
-.group-icon,
-.node-icon,
-.layout-content__right img {
-  width: 18px !important;
-  height: 18px !important;
-  min-width: 18px !important;
-  min-height: 18px !important;
-  border-radius: 4px !important; /* Premium rounded corner matching buttons */
-  object-fit: contain !important;
-  vertical-align: middle !important;
-  margin-right: 8px !important;
+/* Target text containers to catch inline text emojis that have no wrappers */
+.layout-content__right [class*="card"] .MuiTypography-root,
+.layout-content__right [class*="card"] .MuiListItemText-root,
+.layout-content__right [class*="card"] [class*="name"],
+.layout-content__right [class*="card"] [class*="title"],
+.layout-content__right .MuiListItemButton-root .MuiTypography-root,
+.layout-content__right .MuiListItemButton-root .MuiListItemText-root {
+  filter: grayscale(100%) opacity(0.85) !important;
+  transition: filter 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Target emoji icons (text emojis or custom emoji wrapper span) */
-.emoji,
-span[class*="emoji"] {
-  font-size: 1.15rem !important; /* Adjust size to harmonize with label text */
-  line-height: 1 !important;
-  vertical-align: middle !important;
-  margin-right: 6px !important;
-  display: inline-flex !important;
-  align-items: center !important;
+/* Premium Hover & Selection States: Fade in color dynamically for active interaction */
+.layout-content__right [class*="card"]:hover .MuiTypography-root,
+.layout-content__right [class*="card"].active .MuiTypography-root,
+.layout-content__right [class*="card"].selected .MuiTypography-root,
+.layout-content__right [class*="card"].Mui-selected .MuiTypography-root,
+.layout-content__right [class*="card"]:hover .MuiListItemText-root,
+.layout-content__right [class*="card"].active .MuiListItemText-root,
+.layout-content__right [class*="card"].selected .MuiListItemText-root,
+.layout-content__right [class*="card"].Mui-selected .MuiListItemText-root,
+.layout-content__right [class*="card"]:hover [class*="name"],
+.layout-content__right [class*="card"].active [class*="name"],
+.layout-content__right [class*="card"].selected [class*="name"],
+.layout-content__right [class*="card"].Mui-selected [class*="name"],
+.layout-content__right [class*="card"]:hover [class*="title"],
+.layout-content__right [class*="card"].active [class*="title"],
+.layout-content__right [class*="card"].selected [class*="title"],
+.layout-content__right [class*="card"].Mui-selected [class*="title"],
+.layout-content__right .MuiListItemButton-root:hover .MuiTypography-root,
+.layout-content__right .MuiListItemButton-root.Mui-selected .MuiTypography-root,
+.layout-content__right .MuiListItemButton-root:hover .MuiListItemText-root,
+.layout-content__right .MuiListItemButton-root.Mui-selected .MuiListItemText-root {
+  filter: grayscale(0%) opacity(1) !important;
 }
